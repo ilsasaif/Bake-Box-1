@@ -40,4 +40,26 @@ nav a {
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
+}.review-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f2e2dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 22px;
+}
+
+.rating {
+  margin: 10px 0;
 }
