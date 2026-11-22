@@ -1,14 +1,13 @@
-import Badge from "./Badge";
-
 function NankhataiCard() {
-  const name = "Nankhatai";
-  const price = 300;
+  const name = "Nankhatai Box";
+  const price = 350;
 
   return (
-    <div>
+    <div className="product-card">
+      <span className="badge new">New</span>
       <h3>{name}</h3>
-      <p>Price: Rs {price}</p>
-      <Badge />
+      <p>Box of 12, cardamom flavour</p>
+      <p>Rs {price}</p>
     </div>
   );
 }

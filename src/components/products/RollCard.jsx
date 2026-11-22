@@ -1,11 +1,15 @@
+import Badge from "./Badge";
+
 function RollCard() {
-  const name = "Cinnamon Roll";
+  const name = "Cinnamon Rolls";
   const price = 500;
 
   return (
-    <div>
+    <div className="product-card">
+      <Badge />
       <h3>{name}</h3>
-      <p>Price: Rs {price}</p>
+      <p>Box of 4, with cream cheese</p>
+      <p>Rs {price}</p>
     </div>
   );
 }

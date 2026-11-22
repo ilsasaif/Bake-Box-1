@@ -1,6 +1,8 @@
 function Badge() {
   return (
-    <span>Best Seller</span>
+    <span className="badge bestseller">
+      Bestseller
+    </span>
   );
 }
 
