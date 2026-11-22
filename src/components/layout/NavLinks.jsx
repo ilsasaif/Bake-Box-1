@@ -1,10 +1,10 @@
 function NavLinks() {
   return (
     <nav>
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
+      <a href="#shop">Shop</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+      <a href="#order">Order</a>
+      <a href="#visit">Visit us</a>
     </nav>
   );
 }

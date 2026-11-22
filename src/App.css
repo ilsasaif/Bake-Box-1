@@ -182,3 +182,19 @@
     border-right-color: var(--border);
   }
 }
+.order-info {
+  background-color: #fff0f0;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #3b1720;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}

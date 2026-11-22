@@ -4,10 +4,13 @@ import Rating from "./Rating";
 function ReviewSara() {
   return (
     <div className="review-card">
-      <Avatar />
-      <h3>Sara</h3>
-      <Rating />
-      <p>The brownies were delicious and fresh!</p>
+      <div className="review-header">
+        <Avatar />
+        <h3>Sara A.</h3>
+        <Rating />
+      </div>
+
+      <p>Best brownies on campus. I ordered twice in one week!</p>
     </div>
   );
 }

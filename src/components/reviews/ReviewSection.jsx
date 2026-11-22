@@ -3,10 +3,10 @@ import ReviewHira from "./ReviewHira";
 
 function ReviewSection() {
   return (
-    <section>
-      <h2>Customer Reviews</h2>
+    <section id="reviews">
+      <h2>What students say</h2>
 
-      <div>
+      <div className="reviews-grid">
         <ReviewSara />
         <ReviewHira />
       </div>
