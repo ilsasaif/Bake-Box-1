@@ -1,9 +1,5 @@
-function Badge() {
-  return (
-    <span className="badge bestseller">
-      Bestseller
-    </span>
-  );
+function Badge({ text, type }) {
+  return <span className={`badge ${type}`}>{text}</span>;
 }
 
 export default Badge;

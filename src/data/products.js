@@ -4,4 +4,4 @@ export const products = [
   { id: 3, name: "Rolls", price: 500, inStock: false, left: 0 },
   { id: 4, name: "Cupcakes", price: 400, inStock: true, left: 2 },
   { id: 5, name: "Cookies", price: 300, inStock: true, left: 20 },
-];
+]
