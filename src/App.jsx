@@ -1,4 +1,6 @@
+
 import "./App.css";
+import CartSummary from "./components/order/CartSummary";
 import ShopHeader from "./components/layout/ShopHeader";
 import ProductSection from "./components/products/ProductSection";
 import ReviewSection from "./components/reviews/ReviewSection";
@@ -11,12 +13,16 @@ function App() {
       <ShopHeader />
       <ProductSection />
       <ReviewSection />
+
       <OrderInfo
         itemName="Chocolate Brownies"
         quantity={5}
         price={450}
         delivery={100}
       />
+
+      <CartSummary />
+
       <Footer />
     </div>
   );
