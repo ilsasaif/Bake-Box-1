@@ -1,18 +1,15 @@
-import Avatar from "./Avatar";
-import Rating from "./Rating";
 
-function ReviewHira() {
+function ReviewCard({ name, rating, comment }) {
   return (
     <div className="review-card">
       <div className="review-header">
-        <Avatar />
-        <h3>Hira M.</h3>
-        <Rating />
+        <h3>{name}</h3>
+        <p>{"★".repeat(rating)}</p>
       </div>
 
-      <p>The nankhatai tasted just like my grandmother's.</p>
+      <p>{comment}</p>
     </div>
   );
 }
 
-export default ReviewHira;
+export default ReviewCard;

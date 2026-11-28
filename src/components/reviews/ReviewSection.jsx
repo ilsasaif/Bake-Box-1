@@ -1,61 +1,40 @@
-function Avatar() {
-  return <div className="avatar">👤</div>;
-}
 
-function Rating({ stars = 5 }) {
-  return <div className="rating">{"⭐".repeat(stars)}</div>;
-}
-
-function ReviewCard({ name, text, stars }) {
-  return (
-    <div className="review-card">
-      <div className="review-header">
-        <Avatar />
-        <h3>{name}</h3>
-        <Rating stars={stars} />
-      </div>
-
-      <p>{text}</p>
-    </div>
-  );
-}
-
-const reviews = [
-  {
-    id: 1,
-    name: "Sara A.",
-    text: "Best brownies on campus. I ordered twice in one week!",
-    stars: 5,
-  },
-  {
-    id: 2,
-    name: "Hira M.",
-    text: "The nankhatai tasted just like my grandmother's.",
-    stars: 5,
-  },
-  {
-    id: 3,
-    name: "Ayesha K.",
-    text: "Cinnamon rolls were soft and fresh. Delivery was quick too.",
-    stars: 4,
-  },
-];
+import { reviews } from "../../data/reviews";
+import ReviewCard from "./ReviewCard";
 
 function ReviewSection() {
+  let total = 0;
+
+  for (let i = 0; i < reviews.length; i++) {
+    total = total + reviews[i].rating;
+  }
+
+  const average = reviews.length > 0
+    ? (total / reviews.length).toFixed(1)
+    : 0;
+
   return (
     <section id="reviews">
       <h2>What students say</h2>
 
-      <div className="reviews-grid">
-        {reviews.map((review) => (
-          <ReviewCard
-            key={review.id}
-            name={review.name}
-            text={review.text}
-            stars={review.stars}
-          />
-        ))}
-      </div>
+      {reviews.length > 0 && (
+        <p>Average rating: {average}</p>
+      )}
+
+      {reviews.length === 0 ? (
+        <p>No reviews yet. Be the first!</p>
+      ) : (
+        <div className="reviews-grid">
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              name={review.name}
+              rating={review.rating}
+              comment={review.comment}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
